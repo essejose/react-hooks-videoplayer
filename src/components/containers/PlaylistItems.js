@@ -1,10 +1,12 @@
 import React from 'react';
 import PlaylistItem from '../PlaylistItem';
-
+import StyledPlaylistitems from '../styles/StyledPlaylistitems';
 const PlaylistItems = props =>{
 
     return(
-        <PlaylistItem/>
+        <StyledPlaylistitems>
+            <PlaylistItem/>
+        </StyledPlaylistitems>
     )
 }
 

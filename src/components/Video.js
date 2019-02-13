@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
-
-const Video = props =>{
+import StyledVideoWrapper from './styles/StyledVideoWrapper';
+import StyledVideo from './styles/StyledVideo';
+const Video = ({active,autoplay,endCallback,progressCallback}) =>{
 
     return(
-      <div>
-          Video !
-      </div>
+
+
+      <StyledVideo> 
+        <StyledVideoWrapper> 
+            <ReactPlayer
+              width="100%"
+              height ="100%"
+              style = {{postion:"absolute",top:"0"}}
+              playing={autoplay}
+              controls = {true}
+              url = {active.video}
+              onEnded={endCallback}
+              onProgress = {progressCallback}
+            />
+        </StyledVideoWrapper> 
+      </StyledVideo>
     )
 }
 
